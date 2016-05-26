@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajax GET Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+<body>
+
+  Test
+
+  <script type="text/javascript" src="../../../build/lapiz.js"></script>
+  <script type="text/javascript" src="../ajax.js"></script>
+  <script type="text/javascript">
+  Lapiz.Ajax.on.status200(function(){
+    console.log("status200");
+    console.log(arguments);
+  });
+
+  Lapiz.Ajax.get("./", {"action":"foo"}, function(){
+    console.log("Callback");
+    console.log(arguments);
+  });
+  </script>
+  </body>
+</html>
